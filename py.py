@@ -147,19 +147,90 @@
 # r = Rectangle(5, 10)
 # print("Площадь равна:", r.area(), "Периметр равен ", r.perimetr())  
 # 19
-class Student:
-    def __init__(self, name, grades):
-        self.name = name
-        self.grades = grades
-class GraduateStudent(Student):
-    def __init__(self, name, grades, speciality):
-        super().__init__(name, grades)
-        self.speciality = speciality
-    def job(self):    
-        return f"Your name is {self.name}, Gardes are {self.grades}, Your thesis {self.speciality}"
+# class Student:
+#     def __init__(self, name, grades):
+#         self.name = name
+#         self.grades = grades
+# class GraduateStudent(Student):
+#     def __init__(self, name, grades, speciality):
+#         super().__init__(name, grades)
+#         self.speciality = speciality
+#     def job(self):    
+#         return f"Your name is {self.name}, Gardes are {self.grades}, Your thesis {self.speciality}"
 
-graduate = GraduateStudent("Alex", 12, "good")
-print(graduate.job())
+# graduate = GraduateStudent("Alex", 12, "good")
+# print(graduate.job())
+# 20
+# a = [1, 1, 2, 3, 5, 8, 8, 13, 21, 34, 55, 89]
+# for i in a:
+#     if i < 5:
+#         print(i)
+# 21
+# a = [1, 1, 2, 3, 5, 8, 8, 13, 21, 34, 55, 89]
+# b = [1, 2, 3, 4, 5, 6, 7, 13, 20, 32, 55, 90]
+# for i in a:
+#     if i in b:
+#         print(i)
+# 22
+# people = { "Выся": 25, "Beka": 12, "alex": 1, "anna": 21,}
+# sorted_people = sorted(people.items(), key=lambda item: item[1])
+# sorted_people_2 = sorted(people.items(), key=lambda item: item[1], reverse=True)
+# print(sorted_people)
+# print(sorted_people_2)
+# 23
+# di = {'a': 500, 'b': 5874,  'c': 560,  'd': 400,  'e': 5874,  'f': 20}
+# print(sorted(di, key=di.get)[-3:])
+# 24 
+# a = " a1_ dudhush_ahyh, whshbd_jsjj"
+# print(a.count("_"))
+# 25
+# a = input("введите оператичексое выражение + - * / ")
+# b = int(input("введите первое число "))
+# с = int(input("введите второе число "))
+# if a == "+":
+#     print("your answer", b + с)
+# elif a == "-":
+#     print("your answer", b - с)
+# elif a == "*":
+#     print("your answer", b * с)
+# elif a == "/":
+#     print("your answer", b / с)
+# d = input("хотите добавить еще что-то?  yes/no")
+# if d == "yes":
+#     r = int(input("введите   первое число "))
+#     k = int(input("введите  второе число "))
+#     m = input("Доступные операции (**) ")
+    
+#     print("answer:", r ** k )
+# elif d == "no":
+#     print("Операция закончена")    
+# 26
+# def check_even_odd():
+#     num = int(input("Enter a number: "))
+#     if num % 2 == 0:
+#         print("odd number")
+#     else:
+#         print("even number")
+import random
+b = random.randint(1, 100)
+print(b)
+a = int(input("enter number berween 1 from 100 "))
+while True:
+    if b > a :
+        print("bolshwe", b)
+        break
+    elif b < a:
+        print("menshe", b)
+    elif b == a:
+        print("ваше число", a)
+
+    
+
+
+
+
+
+
 
 
 
