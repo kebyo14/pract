@@ -211,18 +211,36 @@
 #         print("odd number")
 #     else:
 #         print("even number")
-import random
-b = random.randint(1, 100)
-print(b)
-a = int(input("enter number berween 1 from 100 "))
-while True:
-    if b > a :
-        print("bolshwe", b)
-        break
-    elif b < a:
-        print("menshe", b)
-    elif b == a:
-        print("ваше число", a)
+# import random
+
+# def guess_number():
+#     number = random.randint(1, 100)
+#     tries = 0
+
+#     print("Я загадал число от 1 до 100. Попробуй угадать его.")
+
+#     while True:
+#         guess = int(input("Твоя догадка: "))
+#         tries += 1
+
+#         if guess < number:
+#             print("Мало.")
+#         elif guess > number:
+#             print("Много.")
+#         else:
+#             print(f"Ты угадал число {number} за {tries} попыток!")
+#             break
+
+# if __name__ == "__main__":
+#     guess_number()
+# 27
+
+def sum_of_list(numbers):
+    return sum(numbers)
+my_list = [1, 2, 3, 4, 5]
+print(f"Сумма списка {my_list} = {sum_of_list(my_list)}")
+another_list = [10, 20, 30, 40, 50]
+print(f"Сумма списка {another_list} = {sum_of_list(another_list)}")
 
     
 
