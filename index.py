@@ -235,21 +235,96 @@
 #     guess_number()
 # 27
 
-def sum_of_list(numbers):
-    return sum(numbers)
-my_list = [1, 2, 3, 4, 5]
-print(f"Сумма списка {my_list} = {sum_of_list(my_list)}")
-another_list = [10, 20, 30, 40, 50]
-print(f"Сумма списка {another_list} = {sum_of_list(another_list)}")
+# def sum_of_list(numbers):
+#     return sum(numbers)
+# my_list = [1, 2, 3, 4, 5]
+# print(f"Сумма списка {my_list} = {sum_of_list(my_list)}")
+# another_list = [10, 20, 30, 40, 50]
+# print(f"Сумма списка {another_list} = {sum_of_list(another_list)}")
 
+
+# file1 = "result.txt"
+
+# class Calculator:
+#     def __init__(self, a, b, operation):
+#         self.a = a
+#         self.b = b
+#         self.operation = operation
+#         self.result = 0
+    
+#     def calculate(self):
+#         if self.operation == "*":
+#             self.result = self.a * self.b
+#         elif self.operation == "+":
+#             self.result = self.a + self.b
+#         elif self.operation == "-":
+#             self.result = self.a - self.b
+#         elif self.operation == "/":
+#             self.result = self.a / self.b
+#         elif self.operation == "**":
+#             self.result = self.a ** self.b
+#         else:
+#             print("Ввели не математическую операцию")
+#             return
+
+#         self.save_result()
+
+#     def save_result(self):
+#         with open(file1, "w") as file:
+#             file.write(f"first: {self.a} \nsecond: {self.b} \noperation: {self.operation} \nresult: {self.result} \n")
+
+# try:
+#     a = float(input("Введите число:  "))
+#     b = float(input("Введите второе число: "))
+    
+#     # Convert to int if the number is a whole number
+#     a = int(a) if a.is_integer() else a
+#     b = int(b) if b.is_integer() else b
+    
+#     operation = input("Что хочешь сделать?:  ")
+    
+#     calc = Calculator(a, b, operation)
+#     calc.calculate()
+
+# except ValueError:
+#     print("Вы сделали неправильно")
+
+file1 = "result.txt"
+try:
     
 
+    a = float(input("Введите число:  "))
+    b = float(input("Введите второе число: "))
+    c = input("operation? ")
 
 
+    a = int(a) if a.is_integer() else a
+    b = int(b) if b.is_integer() else b
 
 
-
-
+    if c == "+":
+        d = a + b
+    elif c == "-":
+        d = a - b
+    elif c == "*":
+        d = a * b
+    elif c == "/":
+        d = a / b if b != 0 else "Error: Division by zero"
+    elif c == "**":
+        d = a ** b
+    else:
+        print("Ввели не математическую операцию")
+        exit()
+    def save_result(a, b, c, d):
+        if isinstance(d, (int, float)):  
+            with open(file1, "a") as file:
+                file.write(f"first: {a} \nsecond: {b} \noperation: {c} \nresult: {d} \n")
+        else:
+            print(d)
+except ValueError:
+    print("Вы сделали неправильно или указали буквы")
+save_result(a, b, c, d)            
+            
 
 
     
@@ -261,4 +336,3 @@ print(f"Сумма списка {another_list} = {sum_of_list(another_list)}")
 
     
     
-
