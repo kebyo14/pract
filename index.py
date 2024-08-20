@@ -289,42 +289,80 @@
 # except ValueError:
 #     print("Вы сделали неправильно")
 
-file1 = "result.txt"
-try:
+# file1 = "result.txt"
+# try:
     
 
-    a = float(input("Введите число:  "))
-    b = float(input("Введите второе число: "))
-    c = input("operation? ")
+#     a = float(input("Введите число:  "))
+#     b = float(input("Введите второе число: "))
+#     c = input("operation? ")
 
 
-    a = int(a) if a.is_integer() else a
-    b = int(b) if b.is_integer() else b
+#     a = int(a) if a.is_integer() else a
+#     b = int(b) if b.is_integer() else b
 
 
-    if c == "+":
-        d = a + b
-    elif c == "-":
-        d = a - b
-    elif c == "*":
-        d = a * b
-    elif c == "/":
-        d = a / b if b != 0 else "Error: Division by zero"
-    elif c == "**":
-        d = a ** b
-    else:
-        print("Ввели не математическую операцию")
-        exit()
-    def save_result(a, b, c, d):
-        if isinstance(d, (int, float)):  
-            with open(file1, "a") as file:
-                file.write(f"first: {a} \nsecond: {b} \noperation: {c} \nresult: {d} \n")
-        else:
-            print(d)
-except ValueError:
-    print("Вы сделали неправильно или указали буквы")
-save_result(a, b, c, d)            
+#     if c == "+":
+#         d = a + b
+#     elif c == "-":
+#         d = a - b
+#     elif c == "*":
+#         d = a * b
+#     elif c == "/":
+#         d = a / b if b != 0 else "Error: Division by zero"
+#     elif c == "**":
+#         d = a ** b
+#     else:
+#         print("Ввели не математическую операцию")
+#         exit()
+#     def save_result(a, b, c, d):
+#         if isinstance(d, (int, float)):  
+#             with open(file1, "a") as file:
+#                 file.write(f"first: {a} \nsecond: {b} \noperation: {c} \nresult: {d} \n")
+#         else:
+#             print(d)
+# except ValueError:
+#     print("Вы сделали неправильно или указали буквы")
+# save_result(a, b, c, d)            
             
+# class Nikola:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#     def description(self):
+#         name = input("What is your name: ")
+#         if name == "Николай":
+#             print(f"Я {self.name}, Мне {self.age}")
+#         elif name  != "Николай":
+#             print(f"Я не {name}, а 'Nikolay'")
+# nikola =  Nikola("Николай", 25)
+# nikola.description()
+
+class TriangleChecker:
+    def __init__(self, a, b, c):
+        self.a = a
+        self.b = b
+        self.c = c
+
+    def is_triangle(self, a, b, c):
+        if a > 0 and b > 0 and c > 0:
+            if a + b > c and a + c > b and b + c > a:
+                print("Ура, можно построить треугольник")
+            else:
+                print("Из этих отрезков нельзя построить треугольник")
+        else:
+            print("C отрицательными числами ничего не выйдет")
+
+try:
+    triangle = TriangleChecker(1, 2, 3)
+    triangle.is_triangle(2, 2, 2)
+except TypeError:
+    print("Вы ввели не числа")
+
+        
+
+
+
 
 
     
